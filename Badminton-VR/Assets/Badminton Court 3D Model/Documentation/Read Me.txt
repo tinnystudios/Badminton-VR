@@ -1,0 +1,26 @@
+Documentation of 3D Badminton Court
+
+In this Environment, we have created all the models separatedly, all the models are reuseable and it's depends upon us that how we can use and place in the environment.
+we have created complete Badminton Court in which we have design different models like badminton Net, Badmintion base ground, stylish badminton floor, umpire stool, chair, 4 type of different sliders for ad, Bleachers seats (sitting place) and wall etc.
+
+Models are made with only 2 texture. Models are very low poly. The 3D Badminton Court pack consists of different objects created individually, so you can use them to create an intuitive and eye-catching user interface for your 3D game or animated video. The vectors can be edited and placed at any scene in the game/video to give it a more defined look.
+
+we have different folders:
+1) Material:
+	Models are made with only 3 materials.
+2) Models: 
+	In Models folder, you will see all the models of badminton court. 
+3) Prefabs: 
+	All necessary objects are placed in prefabs folder.
+4) Scene: 
+	There you will see demo scenes of envornment.
+5) Texture:
+	Models are made with only 2 textures
+6) Documentation:
+	You will see ReadMe file.
+
+
+All the prefabs are created, you can use each prefabs according to your environment. you just need to drag and drop each prefab wherever you want. you can create a environment for your 3d badmintion game and 3d animation. 
+
+Each objects are scaleable, you can transform and rotate every object.
+ 
