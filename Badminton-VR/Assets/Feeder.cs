@@ -96,13 +96,11 @@ public class Feeder : MonoBehaviour
                 break;
             case EShotType.Smash:
 
-                // To offset the height, just change the 'y' position of the 'target' location
+                var smashPosition = TargetTransform.position + Vector3.up * 2;
+                var smashDirection = smashPosition - SpawnPoint.position;
+                smashDirection.Normalize();
 
-                var direction = TargetTransform.position - SpawnPoint.position;
-                direction.Normalize();
-
-                shuttleRigidbody.velocity = direction * power * SmashData.Power;
-
+                shuttleRigidbody.velocity = smashDirection * power * SmashData.Power;
 
                 break;
         }
