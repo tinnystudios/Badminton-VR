@@ -24,6 +24,9 @@ public class Feeder : MonoBehaviour
 
     public Transform TargetTransform;
 
+    public Slider AimOffsetSlider;
+    public Slider HeightOffsetSlider;
+
     private void Start()
     {
         StartCoroutine(Run());
@@ -86,7 +89,9 @@ public class Feeder : MonoBehaviour
             case EShotType.Clear:
 
                 // 6 meters clear target?
-                var clearPosition = TargetTransform.position + Vector3.up * 6;
+                var clearPosition = TargetTransform.position + Vector3.up * (6 + HeightOffsetSlider.value);
+                clearPosition += Random.insideUnitSphere.normalized * AimOffsetSlider.value;
+
                 var clearDirection = clearPosition - SpawnPoint.position;
                 clearDirection.Normalize();
 
@@ -96,7 +101,9 @@ public class Feeder : MonoBehaviour
                 break;
             case EShotType.Smash:
 
-                var smashPosition = TargetTransform.position + Vector3.up * 2;
+                var smashPosition = TargetTransform.position + Vector3.up * (2 + HeightOffsetSlider.value);
+                smashPosition += Random.insideUnitSphere.normalized * AimOffsetSlider.value;
+
                 var smashDirection = smashPosition - SpawnPoint.position;
                 smashDirection.Normalize();
 
